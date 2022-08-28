@@ -17,6 +17,11 @@ const Post = ({ post }) => {
                 <Typography variant="h6">{post.creator}</Typography>
                 <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
             </div>
+            <div className={classes.overlay}>
+                <Button style={{ color: 'white'}} size="small" onClick={() => {}}>
+                    <MoreHorizIcon fontSize="default" />
+                </Button>
+            </div>
         </Card>
     );   
 }
