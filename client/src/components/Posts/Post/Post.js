@@ -22,6 +22,9 @@ const Post = ({ post }) => {
                     <MoreHorizIcon fontSize="default" />
                 </Button>
             </div>
+            <div className={classes.details}>
+                <Typography variant="body2" color="textSecondary">{post.tags.map((tag) => `#${tag} `)}</Typography>
+            </div>
         </Card>
     );   
 }
