@@ -25,6 +25,20 @@ const Post = ({ post }) => {
             <div className={classes.details}>
                 <Typography variant="body2" color="textSecondary">{post.tags.map((tag) => `#${tag} `)}</Typography>
             </div>
+            <CardContent>
+                <Typography className={classes.title} variant="h5" gutterBottom>{post.message}</Typography>
+            </CardContent>
+            <CardActions className={classes.cardActions}>
+                <Button size="small" color="primary" onClick={() => x}>
+                    <ThumbUpAltIcon fontSize="small"/>
+                    Like
+                    {post.likeCount}
+                </Button>
+                <Button size="small" color="primary" onClick={() => x}>
+                    <DeleteIcon fontSize="small"/>
+                    Delete
+                </Button>
+            </CardActions>
         </Card>
     );   
 }
