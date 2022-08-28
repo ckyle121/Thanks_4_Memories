@@ -28,3 +28,5 @@ export const createPost = async (req, res) => {
         res.status(409).json({ message: error.message });
     }
 }
+
+export default router;
